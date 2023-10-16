@@ -27,7 +27,7 @@ int main() {
 	printf("%d\n", Min<int>(1, 2));
 	printf("%f\n", Min<float>(1.0f, 2.0f));
 	printf("%lf\n", Min<double>(1.4, 2.4));
-	printf("%c\n", Min<char>(1, 2));
+	Min<char>('a', 'b');
 
 	return 0;
 
