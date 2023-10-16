@@ -3,20 +3,28 @@
 #include <time.h>
 #include <Windows.h>
 
-typedef void (*pFunc)(int*);
+typedef void (*pFunc)(int*, int*, int*);
 
 // コールバック関数
-void correct(int* s) {
-	printf("正解!!");
+void isCorrect(int* s, int* num, int* input) {
+	if (*input == 0 && *num % 2 == 1) {
+		printf("さいころの目は%dなので\n正解!!", *num);
+
+	}
+	else if (*input == 1 && *num % 2 == 0) {
+		printf("さいころの目は%dなので\n正解!!", *num);
+	}
+	else {
+		printf("さいころの目は%dなので\n不正解", *num);
+
+	}
+	
 }
 
-void inCorrect(int* s) {
-	printf("残念不正解");
-}
-
-void setTimeout(pFunc p, int second) {
+void setTimeout(pFunc p, int second,int num, int input) {
 	Sleep(second * 1000);
-	p(&second);
+	p(&second, &num, &input);
+	
 }
 
 int main() {
@@ -24,29 +32,15 @@ int main() {
 	int Time = time(nullptr);
 	srand(Time);
 	int num = rand();
-	int s;
-
+	num = num % 6 + 1;
+	int s; // 入力用
 
 	printf("奇数なら0偶数なら1を入力しよう\n");
 	scanf_s("%d", &s);
 
-	if (s == 0 && num % 2 == 1) {
-		pFunc p;
-		p = correct;
-		setTimeout(p, 3);
+	pFunc p;
+	p = isCorrect;
+	setTimeout(p, 3,num, s);
 
-	}
-	else if (s == 1 && num % 2 == 0) {
-		pFunc p;
-		p = correct;
-		setTimeout(p, 3);
-	}
-	else {
-		pFunc p;
-		p = inCorrect;
-		setTimeout(p, 3);
-	}
-
-	
 	return 0;
 }
