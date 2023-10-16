@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int Recursive(int n1, int n2,int n3, int hour) {
-	if (n1 < n2 && hour >= 9) {
+	if (n1 < n3) {
 
 		printf("%dŽžŠÔ‚ÅÄ‹A“I‚Ì‚Ù‚¤‚ªŽž‹‹‚ð’´‚¦‚½", hour);
 		return (1);
