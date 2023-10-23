@@ -12,7 +12,8 @@ int main() {
 	num = num % 6 + 1;
 	int s; 
 
-	std::function<int(int)> result = [=](int s) {
+	// ‚ ‚Á‚Ä‚é‚©‚Ç‚¤‚©”»’f‚·‚é
+	std::function<int(int)> isCorrect = [=](int s) {
 
 		Sleep(3000);
 
@@ -34,7 +35,7 @@ int main() {
 
 	printf("Šï”‚È‚ç0‹ô”‚È‚ç1‚ğ“ü—Í‚µ‚æ‚¤\n");
 	scanf_s("%d", &s);
-	result(s);
+	isCorrect(s);
 
 
 	return 0;
