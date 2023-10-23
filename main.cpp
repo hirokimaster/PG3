@@ -18,8 +18,8 @@ int SalaryCalc(int n1, int n2,int n3, int n4, int hour) {
 		} 
 
 		printf("[%d時間目の時給]\n", hour);
-		printf("普通の時給の時の給料 = %d\n", n1);
-		printf("再帰的な時給の時の給料 = %d\n", n4);
+		printf("普通の時給の時の給料 %d\n", n1);
+		printf("再帰的な時給の時の給料 %d\n", n4);
 		
 		return SalaryCalc(n1, n2, n3, n4, hour);
 	}
