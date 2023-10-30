@@ -1,21 +1,21 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <Windows.h>
 
 typedef void (*pFunc)(int*, int*, int*);
 
-// ƒR[ƒ‹ƒoƒbƒNŠÖ”
+// ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 void isCorrect(int* s, int* num, int* input) {
 	if (*input == 0 && *num % 2 == 1) {
-		printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n³‰ğ!!", *num);
+		printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\næ­£è§£!!", *num);
 
 	}
 	else if (*input == 1 && *num % 2 == 0) {
-		printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n³‰ğ!!", *num);
+		printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\næ­£è§£!!", *num);
 	}
 	else {
-		printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n•s³‰ğ", *num);
+		printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\nä¸æ­£è§£", *num);
 
 	}
 	
@@ -33,9 +33,9 @@ int main() {
 	srand(Time);
 	int num = rand();
 	num = num % 6 + 1;
-	int s; // “ü—Í—p
+	int s; // å…¥åŠ›ç”¨
 
-	printf("Šï”‚È‚ç0‹ô”‚È‚ç1‚ğ“ü—Í‚µ‚æ‚¤\n");
+	printf("å¥‡æ•°ãªã‚‰0å¶æ•°ãªã‚‰1ã‚’å…¥åŠ›ã—ã‚ˆã†\n");
 	scanf_s("%d", &s);
 
 	pFunc p;
