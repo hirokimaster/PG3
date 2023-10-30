@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <functional>
@@ -12,19 +12,19 @@ int main() {
 	num = num % 6 + 1;
 	int s; 
 
-	// ‚ ‚Á‚Ä‚é‚©‚Ç‚¤‚©”»’f‚·‚é
+	// ã‚ã£ã¦ã‚‹ã‹ã©ã†ã‹åˆ¤æ–­ã™ã‚‹
 	std::function<int(int)> isCorrect = [=](int s) {
 
 		Sleep(3000);
 
 		if (s == 0 && num % 2 == 1) {
-			printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n³‰ğ!!", num);
+			printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\næ­£è§£!!", num);
 		}
 		else if (s == 1 && num % 2 == 0) {
-		    printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n³‰ğ!!", num);
+		    printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\næ­£è§£!!", num);
 		}
 		else {
-			printf("‚³‚¢‚±‚ë‚Ì–Ú‚Í%d‚È‚Ì‚Å\n•s³‰ğ", num);
+			printf("ã•ã„ã“ã‚ã®ç›®ã¯%dãªã®ã§\nä¸æ­£è§£", num);
 		}
 
 		return s;
@@ -33,7 +33,7 @@ int main() {
 
 	
 
-	printf("Šï”‚È‚ç0‹ô”‚È‚ç1‚ğ“ü—Í‚µ‚æ‚¤\n");
+	printf("å¥‡æ•°ãªã‚‰0å¶æ•°ãªã‚‰1ã‚’å…¥åŠ›ã—ã‚ˆã†\n");
 	scanf_s("%d", &s);
 	isCorrect(s);
 
