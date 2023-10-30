@@ -28,13 +28,13 @@ int SalaryCalc(int n1, int n2,int n3, int n4, int hour) {
 
 int main() {
 
-	int num = 1072;
-	int num2 = 100;
-	int num3 = 0;
-	int num4 = 0;
+	int hourWage = 1072;
+	int recursiveWage = 100;
+	int salary = 0;
+	int recursiveSalary = 0;
 	int time = 0;
 
-	SalaryCalc(num, num2, num3, num4, time);
+	SalaryCalc(hourWage, recursiveWage, salary, recursiveSalary, time);
 
 
 	return 0;
