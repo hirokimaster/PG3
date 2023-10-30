@@ -1,9 +1,9 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 int SalaryCalc(int n1, int n2,int n3, int n4, int hour) {
 	if (n1 < n4) {
 
-		printf("%dŽžŠÔ‚ÅÄ‹A“I‚Ì‚Ù‚¤‚ª‹‹—¿‚ð’´‚¦‚½", hour);
+		printf("%dæ™‚é–“ã§å†å¸°çš„ã®ã»ã†ãŒçµ¦æ–™ã‚’è¶…ãˆãŸ", hour);
 		return (1);
 	}
 	else {
@@ -17,9 +17,9 @@ int SalaryCalc(int n1, int n2,int n3, int n4, int hour) {
 			n4 = n4 + n3;
 		} 
 
-		printf("[%dŽžŠÔ–Ú‚ÌŽž‹‹]\n", hour);
-		printf("•’Ê‚ÌŽž‹‹‚ÌŽž‚Ì‹‹—¿ %d\n", n1);
-		printf("Ä‹A“I‚ÈŽž‹‹‚ÌŽž‚Ì‹‹—¿ %d\n", n4);
+		printf("[%dæ™‚é–“ç›®ã®æ™‚çµ¦]\n", hour);
+		printf("æ™®é€šã®æ™‚çµ¦ã®æ™‚ã®çµ¦æ–™ %d\n", n1);
+		printf("å†å¸°çš„ãªæ™‚çµ¦ã®æ™‚ã®çµ¦æ–™ %d\n", n4);
 		
 		return SalaryCalc(n1, n2, n3, n4, hour);
 	}
