@@ -33,7 +33,7 @@ int main() {
 	// 乱数生成
 	std::random_device seed;
 	std::mt19937 randomEngine(seed());
-	std::uniform_int_distribution<int> saikoro(1, 6); // サイコロ
+	std::uniform_int_distribution<int> dice(1, 6); // サイコロ
 
 	int input; // 入力用
 
@@ -42,7 +42,7 @@ int main() {
 
 	pFunc p;
 	p = isCorrect;
-	setTimeout(p, saikoro(randomEngine), input);
+	setTimeout(p, dice(randomEngine), input);
 
 	return 0;
 }
