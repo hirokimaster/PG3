@@ -30,10 +30,10 @@ void setTimeout(pFunc p,int num, int input) {
 
 int main() {
 
-	// サイコロ
+	// 乱数生成
 	std::random_device seed;
 	std::mt19937 randomEngine(seed());
-	std::uniform_int_distribution<int> saikoro(1, 6);
+	std::uniform_int_distribution<int> saikoro(1, 6); // サイコロ
 
 	int input; // 入力用
 
