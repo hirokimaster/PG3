@@ -1,5 +1,4 @@
 #pragma once
-class Suzume;
 
 class Bird {
 public:
