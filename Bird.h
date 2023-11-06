@@ -3,10 +3,10 @@ class Suzume;
 
 class Bird {
 public:
-    Bird() = default;
-   virtual~Bird() = default;
+    Bird();
+   virtual~Bird();
     // 鳴く
-   virtual void BirdSing() = 0;
+   virtual void BirdSing();
 
 };
 
