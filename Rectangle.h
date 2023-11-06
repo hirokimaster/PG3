@@ -10,8 +10,8 @@ public:
 	void Draw()override;
 
 	// setter
-	int SetHeight(int height)const { height = height_; }
-	int SetWidth(int width)const { width = width_; }
+	void SetHeight(int height)override {height_ = height; }
+	void SetWidth(int width)override {width_ = width; }
 
 private:
 	int height_ = 0;

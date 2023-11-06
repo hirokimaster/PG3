@@ -5,11 +5,11 @@ Rectangle::Rectangle(){}
 Rectangle::~Rectangle(){}
 
 void Rectangle::Size(){
-	// ŒvZ
+	// è¨ˆç®—
 	area_ = height_ * width_;
 }
 
 void Rectangle::Draw(){
-	// ŒvZŒ‹‰Ê‚ğ•\¦
-	printf("%d", area_);
+	// è¨ˆç®—çµæœã‚’è¡¨ç¤º
+	printf("çŸ©å½¢ã®é¢ç© = %d", area_);
 }
