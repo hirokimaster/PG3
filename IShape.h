@@ -10,4 +10,5 @@ public:
 	// 表示
 	virtual void Draw() = 0;
 
+
 };

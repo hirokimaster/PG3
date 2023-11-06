@@ -7,11 +7,14 @@ public:
 	Rectangle();
 	~Rectangle();
 	void Size()override;
-
 	void Draw()override;
 
+	// setter
+	int SetHeight(int height)const { height = height_; }
+	int SetWidth(int width)const { width = width_; }
+
 private:
-	int height = 2;
-	int width = 3;
-	int area = 0;
+	int height_ = 0;
+	int width_ = 0;
+	int area_ = 0;
 };
