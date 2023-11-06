@@ -4,9 +4,8 @@ class Suzume;
 class Bird {
 public:
     Bird() = default;
-    virtual ~Bird();
-
-    // –Â‚­
+   ~Bird() = default;
+    // é³´ã
    virtual void BirdSing() = 0;
 
 };

@@ -2,16 +2,32 @@
 #include <Windows.h>
 #include "Bird.h"
 #include "Suzume.h"
+#include "Hato.h"
 
 int main() {
 
-	Bird* bird;
 
-	bird = new Suzume;
+	Bird* bird[2];
 
-	bird->BirdSing();
+	// 生成
+	for (int i = 0; i < 2; i++) {
+		if (i < 1) {
+			bird[i] = new Suzume;
+		}
+		else {
+			bird[i] = new Hato;
+		}
+	}
 
-	delete bird;
+	// 鳩と雀がが鳴いている
+	for (int i = 0; i < 2; i++) {
+		bird[i]->BirdSing();
+	}
+	
+	// 破棄
+	for (int i = 0; i < 2; i++) {
+		delete bird[i];
+	}
 
 	return 0;
 

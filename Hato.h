@@ -1,10 +1,11 @@
 #pragma once
+#include <stdio.h>
 #include "Bird.h"
 
-class Suzume : public Bird {
+class Hato : public Bird {
 public:
-	Suzume();
-	~Suzume();
+	Hato();
+	~Hato();
 	// 鳴く
 	void BirdSing()override;
 };

@@ -1,16 +1,12 @@
 #include "Suzume.h"
 #include <stdio.h>
 
-Suzume::Suzume()
-{
-}
+Suzume::Suzume(){}
 
-Bird::~Bird()
-{
-}
+Suzume::~Suzume(){}
 
 void Suzume::BirdSing() {
-
-	printf("ƒ`ƒ…ƒ“ƒ`ƒ…ƒ“");
+	// é³´ãå£°
+	printf("é›€ãŒé³´ã„ã¦ã„ã‚‹ã€‚ãƒãƒ¥ãƒ³ãƒãƒ¥ãƒ³â€¦\n");
 }
 
