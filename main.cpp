@@ -1,9 +1,11 @@
 ﻿#include <stdio.h>
 
+// 普通の給料
 int salaryCalc(int salaryWage, int hour) {
 	return salaryWage * hour;
 }
 
+// 再帰的な給料
 int recursiveSalaryCalc(int recursiveWage) {
 	return recursiveWage * 2 - 50;
 }
