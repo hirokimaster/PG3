@@ -4,9 +4,12 @@
 int main() {
 	
 	Enemy* enemy = new Enemy();
-	int time = 0;
+	// 敵が離脱するまでループ
+	while (!enemy->GetIsLeave()) {
+		enemy->Update();
+	}
 
-	enemy->Update();
+	delete enemy;
 
-
+	return 0;
 }

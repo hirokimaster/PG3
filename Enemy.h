@@ -12,14 +12,16 @@ class Enemy {
 public:
 
 	void Update();
-	void Approach(); // ‹ßÚ
-	void Attack();	 // ËŒ‚
-	void Leave();	 // —£’E
+	void Approach(); // è¿‘æ¥
+	void Attack();	 // å°„æ’ƒ
+	void Leave();	 // é›¢è„±
+	bool GetIsLeave() { return isLeave_; }
 
 private:
-	// ƒtƒF[ƒY
+	// ãƒ•ã‚§ãƒ¼ã‚º
 	Phase phase_ = Phase::Approach;
-	// ƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^‚Ìƒe[ƒuƒ‹
+	// ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿ã®ãƒ†ãƒ¼ãƒ–ãƒ«
 	static void(Enemy::* phaseFuncTable[])();
-
+    // é›¢è„±ã—ãŸã‹
+	bool isLeave_ = false;
 };

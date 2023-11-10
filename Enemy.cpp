@@ -2,35 +2,34 @@
 
 void Enemy::Update(){
 	
-	// Œ»İƒtƒF[ƒY‚ÌŠÖ”‚ğÀs
-	(this->*phaseFuncTable[static_cast<size_t>(phase_)])();
-	Sleep(2000);
-	phase_ = Phase::Attack;
-	(this->*phaseFuncTable[static_cast<size_t>(phase_)])();
-	Sleep(2000);
-	phase_ = Phase::Leave;
+	// ç¾åœ¨ãƒ•ã‚§ãƒ¼ã‚ºã®é–¢æ•°ã‚’å®Ÿè¡Œ
 	(this->*phaseFuncTable[static_cast<size_t>(phase_)])();
 	
 }
 
-// ‹ßÚ
+// è¿‘æ¥
 void Enemy::Approach(){
-	printf("¡‚Í‹ßÚƒtƒF[ƒYB2•bŒã‚ÉËŒ‚‚ÉˆÚ‚é\n");
+	printf("ä»Šã¯è¿‘æ¥ãƒ•ã‚§ãƒ¼ã‚ºã€‚2ç§’å¾Œã«å°„æ’ƒã«ç§»ã‚‹\n");
+	Sleep(2000);
+	phase_ = Phase::Attack;
 }
 
-// ËŒ‚
+// å°„æ’ƒ
 void Enemy::Attack(){
-	printf("¡‚ÍËŒ‚ƒtƒF[ƒYB2•bŒã‚É—£’E‚·‚é\n");
+	printf("ä»Šã¯å°„æ’ƒãƒ•ã‚§ãƒ¼ã‚ºã€‚2ç§’å¾Œã«é›¢è„±ã™ã‚‹\n");
+	Sleep(2000);
+	phase_ = Phase::Leave;
 }
 
-// —£’E
+// é›¢è„±
 void Enemy::Leave(){
-	printf("—£’E‚µ‚½");
+	printf("é›¢è„±ã—ãŸ");
+	isLeave_ = true;
 }
 
-// ƒtƒF[ƒY‚ÌŠÖ”ƒe[ƒuƒ‹
+// ãƒ•ã‚§ãƒ¼ã‚ºã®é–¢æ•°ãƒ†ãƒ¼ãƒ–ãƒ«
 void (Enemy::* Enemy::phaseFuncTable[])() {
 	&Enemy::Approach,
-	& Enemy::Attack,
-	& Enemy::Leave
+	&Enemy::Attack,
+	&Enemy::Leave
 };
