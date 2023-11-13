@@ -6,7 +6,7 @@
 int main() {
 	IShape* shape;
 
-	// 何の計算をするか。今は矩円
+	// 何の計算をするか。今は円
 	shape = new Circle(2.0f);
 
 	// 計算
