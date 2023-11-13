@@ -4,17 +4,12 @@
 class Rectangle : public IShape {
 public:
 
-	Rectangle();
+	Rectangle(float height,float width);
 	~Rectangle();
 	void Size()override;
 	void Draw()override;
-
-	// setter
-	void SetHeight(int height)override {height_ = height; }
-	void SetWidth(int width)override {width_ = width; }
-
 private:
-	int height_ = 0;
-	int width_ = 0;
-	int area_ = 0;
+
+	float height_ = 0.0f;
+	float width_ = 0.0f;
 };

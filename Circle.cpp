@@ -1,6 +1,8 @@
 #include "Circle.h"
 
-Circle::Circle(){}
+Circle::Circle(float radius){
+	radius_ = radius;
+}
 
 Circle::~Circle(){}
 

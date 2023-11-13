@@ -6,15 +6,12 @@
 int main() {
 	IShape* shape;
 
-	// 何の計算をするか。今は矩形
-	shape = new Rectangle;
-
-	// 矩形の縦と横の値をセット
-	shape->SetHeight(3);
-	shape->SetWidth(2);
+	// 何の計算をするか。今は矩円
+	shape = new Circle(2.0f);
 
 	// 計算
 	shape->Size();
+
 	// 表示
 	shape->Draw();
 

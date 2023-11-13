@@ -1,6 +1,9 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(){}
+Rectangle::Rectangle(float height, float width){
+	height_ = height;
+	width_ = width;
+}
 
 Rectangle::~Rectangle(){}
 
