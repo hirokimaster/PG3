@@ -1,8 +1,14 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <random>
 #include <functional>
 #include <Windows.h>
+
+// setTimeout関数
+void setTimeout(std::function<int(int)> func,int input, int second) {
+	 Sleep(1000 * second);
+	 func(input);
+}
 
 int main() {
 
@@ -17,14 +23,11 @@ int main() {
 	// あってるかどうか判断する
 	std::function<int(int)> isCorrect = [=](int input) {
 
-		
-		Sleep(3000);
-
 		if (input == 0 && diceResult % 2 == 1) {
 			printf("さいころの目は%dなので\n正解!!", diceResult);
 		}
 		else if (input == 1 && diceResult % 2 == 0) {
-		    printf("さいころの目は%dなので\n正解!!", diceResult);
+			printf("さいころの目は%dなので\n正解!!", diceResult);
 		}
 		else {
 			printf("さいころの目は%dなので\n不正解", diceResult);
@@ -35,11 +38,9 @@ int main() {
 	};
 
 	
-
 	printf("奇数なら0偶数なら1を入力しよう\n");
 	scanf_s("%d", &input);
-	isCorrect(input);
-
+	setTimeout(isCorrect, input, 3);
 
 	return 0;
 }
