@@ -4,8 +4,10 @@
 #include <functional>
 #include <Windows.h>
 
+template<typename Func>
+
 // setTimeout関数
-void setTimeout(std::function<int(int)> func,int input, int second) {
+void setTimeout(Func func,int input, int second) {
 	 Sleep(1000 * second);
 	 func(input);
 }
