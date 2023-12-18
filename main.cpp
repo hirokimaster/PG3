@@ -7,9 +7,9 @@ int main() {
 	std::list<const char*> yamanoteline;
 	std::list<const char*>::iterator itr;
 	int age = 0;
-	yamanoteline = { "tokyo", "yurakucho", "shimbashi", "hamamatucho", "tamachi", "shinagawa", "osaki", "gotanda",
-		"meguro", "ebisu", "shibuya", "harajuku", "yoyogi", "shinjuku", "shin-okubo", "takadanobaba", "mejiro", "ikebukuro", "otsuka",
-		"sugamo", "komagome", "tabata", "nippori", "uguisudani", "ueno", "okachimachi", "akihabara", "kanda"
+	yamanoteline = { "Tokyo", "Yurakucho", "Shimbashi", "Hamamatucho", "Tamachi", "Shinagawa", "Osaki", "Gotanda",
+		"Meguro", "Ebisu", "Shibuya", "Harajuku", "Yoyogi", "Shinjuku", "Shin-Okubo", "Takadanobaba", "Mejiro", "Ikebukuro", "Otsuka",
+		"Sugamo", "Komagome", "Tabata", "Nippori", "Uguisudani", "Ueno", "Okachimachi", "Akihabara", "Kanda"
 	};
 
 	// 1970年
@@ -25,8 +25,8 @@ int main() {
 	if (age == 1) {
 		std::cout << "2019年" << std::endl;
 		for (itr = yamanoteline.begin(); itr != yamanoteline.end(); ++itr) {
-			if (*itr == "nippori") {
-				itr = yamanoteline.insert(itr, "nishi-nippori");
+			if (*itr == "Nippori") {
+				itr = yamanoteline.insert(itr, "Nishi-Nippori");
 				std::cout << *itr << std::endl;
 				++itr;
 			}
@@ -39,8 +39,8 @@ int main() {
 	if (age == 2) {
 		std::cout << "2022年" << std::endl;
 		for (itr = yamanoteline.begin(); itr != yamanoteline.end(); ++itr) {
-			if (*itr == "shinagawa") {
-				itr = yamanoteline.insert(itr, "takanawaGateway");
+			if (*itr == "Shinagawa") {
+				itr = yamanoteline.insert(itr, "Takanawa Gateway");
 				std::cout << *itr << std::endl;
 				++itr;
 			}
