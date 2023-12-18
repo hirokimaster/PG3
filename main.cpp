@@ -11,7 +11,7 @@ int main() {
 	std::vector<std::string> readFile;
 	std::string str;
 	while (std::getline(file, str)) {
-		std::cout << readFile.size() + 1 << std::endl;
+		std::cout << readFile.size() << std::endl;
 	}
 
 	return 0;
