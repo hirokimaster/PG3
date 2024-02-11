@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 // 普通の給料
 int SalaryCalc(int salaryWage, int hour) {
